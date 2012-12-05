@@ -39,5 +39,7 @@ def FibR(n):
 
 maximum = input('zadej maximální index Fibonacciho poslounosti > ')
 Fib(maximum)
+print '\n######################\n'
+print FibR(maximum)
 
 
