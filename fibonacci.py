@@ -7,24 +7,28 @@
 # Úloha:   Fibonacciho posloupnost
 ############################################################################
 
+# podprogram
+def Fib(n):
+    if n < 0:
+        print "Index musí být kladný"
+    elif n == 0:
+        print 0
+    elif n == 1:
+        print 0,1
+    else:
+        print 0,1,
+        # v proměný si uchovávám hodnoty předhozích dvou čísel
+        (F_2, F_1 ) = (0,1) 
+        # řídící proměná cyklu
+        i = 2 
+        while i<=n :
+            i += 1
+            Fn = F_2 + F_1
+            print Fn,
+            (F_2, F_1) = ( F_1, Fn)
+
 
 maximum = input('zadej maximální index Fibonacciho poslounosti > ')
+Fib(maximum)
 
 
-if maximum < 0:
-    print "Index musí být kladný"
-elif maximum == 0:
-    print 0
-elif maximum == 1:
-    print 0,1
-else:
-    print 0,1,
-    F_2 = 0  # v proměný si uchovávám hodnoty předhozích dvou čísel
-    F_1 = 1
-    i = 2    # řídící proměná cyklu
-    while i<=maximum :
-        i = i + 1
-        Fn = F_2 + F_1
-        print Fn,
-        F_2 = F_1
-        F_1 = Fn
