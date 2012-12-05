@@ -27,6 +27,15 @@ def Fib(n):
             print Fn,
             (F_2, F_1) = ( F_1, Fn)
 
+# rekurzivní definice
+def FibR(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 1
+    elif n>1:
+        return FibR(n-1)+FibR(n-2)
+
 
 maximum = input('zadej maximální index Fibonacciho poslounosti > ')
 Fib(maximum)
